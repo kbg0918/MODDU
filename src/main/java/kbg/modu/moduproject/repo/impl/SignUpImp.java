@@ -11,9 +11,10 @@ public class SignUp implements SignUpRepository {
 
     @Autowired
     JdbcTemplate tp;
+
     @Override
     public void save(Member m) {
-        tp.update("update member set password = ?, name = ?, email = ?, USER_Role =? ,telnum = ?, address=?, addDate =? where id = ?",
-                m.getSt_pw(),m.getSt_name(), m.getSt_email(), m.getSt_telNum(), m.getUSER_Role(), m.getSt_address(), m.getSt_addDate(), m.getSt_id());
+        tp.update("insert into member values(?,?)",
+                m.getSt_id(), m.getSt_id());
     }
 }
