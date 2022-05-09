@@ -1,8 +1,7 @@
 package kbg.modu.moduproject.repo;
 
-import kbg.modu.moduproject.domain.Member;
-import org.springframework.web.bind.annotation.Mapping;
 
+import kbg.modu.moduproject.domain.Member;
 
 public interface SignUpRepository {
     void save(Member m);
